@@ -14,7 +14,7 @@
 			 
             <form action="controlador.php" method="post">
             <fieldset>
-				<legend>Ingrese usuario y contraseña</legend>    
+				<legend>Ingrese usuario y contraseña (un usuario con accesso a la base Mysql)</legend>    
 					<input type='text' name='usuar' />
 					<input type='text' name='pas'/>
 					<input type="submit" value="Entrar"/>
