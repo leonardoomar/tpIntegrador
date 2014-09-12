@@ -10,8 +10,7 @@
 		$_SESSION['url']='aBuscar';
 		header("Location: controlador.php");
 		die();
-	}elseif(isset($_POST['busca'])){
-		require('buscar.php');
+		
 	}
 	
 ?>
@@ -31,3 +30,8 @@
 	<input type='submit' name='volver' value='Volver al menu' />
 </form>
 
+<?php
+
+if(isset($_POST['busca'])){
+		require('buscar.php');
+	}

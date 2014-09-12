@@ -14,7 +14,7 @@
 	try{
 		
 		$sql = "SELECT id, apellido, nombre, edad FROM clientes
-				WHERE ((apellido = :apel) and (nombre = :nomb) and (edad = :edad))";
+				WHERE ((apellido like :apel) and (nombre like :nomb) and (edad like :edad))";
 				
 		$stmt = $pdo->prepare($sql);
 		
@@ -34,13 +34,13 @@
 	}
 	
 	if ($resultados){
-	
+	echo sprintf("ID	-	NOMBRE	-	APELLIDO	-	AÑOS<br>");
 	foreach($resultados as $fila)
-	{
-	  echo sprintf("ID:%s - APELLIDO:%s - NOMBRE: %s (%d años)<br/>",
+	{	  
+	  echo sprintf("%s	-	%s	-	%s	-	%d<br/>",
 				   $fila['id'],
-				   $fila['apellido'],
 				   $fila['nombre'],
+				   $fila['apellido'],
 				   $fila['edad']);
 	};
 	}else{
