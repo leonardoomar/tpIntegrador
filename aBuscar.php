@@ -16,7 +16,7 @@
 ?>
 
 <h2>Menu Buscar cliente</h2>
-
+<h5>- puede utilizar el caracter % como comodin -</h5>
 <form action='' method='POST'>
 	<fieldset>
 		Nombre: <input type='text' name='nombre'/>
